@@ -1,6 +1,8 @@
 const express = require('express');
+const db = require('./db'); 
 const ENV = process.env.NODE_ENV || 'development';
 const PORT = process.env.PORT || 3001;
+
 
 const app = express();
 
@@ -11,13 +13,33 @@ if(ENV !== 'production'){
 
     app.use(cors());
 
-}
+};
 
-app.get('/api/test', (req, res) => {
+app.use(express.json());
+
+app.post('/api/test', async (req, res) => {
+
+    const {name, email, phone} = req.body;
+
+    const [result] = await db.execute('INSERT INTO users (name, email, phone) VALUES (?, ?, ?)', [name, email, phone])
+
     res.send({
-        message: 'API test successful',
+        message: 'POST API Test Successful',
         method: req.method,
-        url: req.url
+        url: req.url,
+        userId: result.insertId
+    });
+});
+
+app.get('/api/test', async (req, res) => {
+
+    const [rows] = await db.query('SELECT * FROM users');
+
+    res.send({
+        message: 'GET API Test Successful',
+        method: req.method,
+        url: req.url,
+        users: rows
     });
 });
 
