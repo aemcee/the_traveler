@@ -1,0 +1,33 @@
+{
+  "name": "the_traveler",
+  "version": "1.0.0",
+  "description": "An image gallery for travelers to document their trips in albums",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "nodemon server.js",
+    "dev:client": "npm start --prefix client",
+    "build": "npm run build --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aemcee/the_traveler.git"
+  },
+  "author": "Anthony Capili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aemcee/the_traveler/issues"
+  },
+  "homepage": "https://github.com/aemcee/the_traveler#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
