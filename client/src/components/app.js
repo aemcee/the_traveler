@@ -6,14 +6,14 @@ import ApiTest from './api_test';
 import Display from './display';
 import Landing from './landing';
 import Upload from './upload';
+import Nav from './nav';
 
 const App = () => (
     <div className="app">
-        <h1 className="text-center">The Traveler</h1>
+        <Nav/>
         <Route path="/" exact component={Landing}/>
         <Route path="/display" component={Display}/>
         <Route path="/upload" component={Upload}/>
-        <ApiTest/>
     </div>
 );
 
