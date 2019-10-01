@@ -1,0 +1,109 @@
+body {
+    height: 100vh;
+}
+
+
+.image-container {
+    border: 2px solid black;
+}
+
+.pic {
+    border: 2px solid gray;
+}
+
+.background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.header-container    {
+    background-color: black;
+    height: 65px;
+}
+
+/* .header-bar div {
+    background-position: center center;
+} */
+
+.navbar {
+    padding: 0;
+}
+
+.drop-down {
+    background-color: white;
+}
+
+/* .form-control {
+    font-size: 10px;
+} */
+
+.header-bar {
+    margin: auto;
+}
+
+.pup1 {
+    background-image: url("../../assets/images/Pup1.jpeg");
+    
+}
+
+.pup2 {
+    background-image: url("../../assets/images/Pup2.jpg");
+}
+
+.pup3 {
+    background-image: url("../../assets/images/Pup3.jpeg");
+}
+
+.pup5 {
+    background-image: url("../../assets/images/Pup5.png")
+}
+
+@media only screen and (min-width: 993px) {
+    /* .signup button, .signin button, input {
+        font-size: 10px;
+    } */
+
+    .background-image {
+        height: 300px;
+        min-width: 300px;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .signup button, .signin button, input {
+        font-size: 14px;
+    }
+
+    .background-image {
+        height: 300px;
+        min-width: 300px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .signup button, .signin button, input {
+        font-size: 14px;
+    }
+
+    .background-image {
+        height: 300px;
+        min-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .signup button, .signin button, input {
+        font-size: 12px;
+    }
+
+    .background-image {
+        height: 300px;
+        min-width: 300px;
+    }
+
+}
+
